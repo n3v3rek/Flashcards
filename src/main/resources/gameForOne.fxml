@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="gameForOnePane" prefHeight="455.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaFXML.gameForOneController">
+    <center>
+        <AnchorPane prefHeight="455.0" prefWidth="750.0" VBox.vgrow="ALWAYS">
+            <Pane prefHeight="455.0" prefWidth="760.0" style="-fx-background-color: #C6CECE;">
+                <Pane layoutY="313.0" prefHeight="150.0" prefWidth="760.0" style="-fx-background-color: #C6CECE;">
+                    <Button fx:id="AnswerB" layoutX="14.0" layoutY="75.0" mnemonicParsing="false" onAction="#handleButton5Action" prefHeight="50.0" prefWidth="350.0" style="-fx-background-color: white; -fx-font-weight: bold" text="ANSWER C" />
+                    <Button fx:id="AnswerA" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleButton4Action" prefHeight="50.0" prefWidth="350.0" style="-fx-background-color: white; -fx-font-weight: bold" text="ANSWER A" />
+                    <Button fx:id="AnswerD" layoutX="375.0" layoutY="75.0" mnemonicParsing="false" onAction="#handleButton7Action" prefHeight="50.0" prefWidth="350.0" style="-fx-background-color: white; -fx-font-weight: bold" text="ANSWER D" />
+                    <Button fx:id="AnswerC" layoutX="375.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleButton6Action" prefHeight="50.0" prefWidth="350.0" style="-fx-background-color: white; -fx-font-weight: bold" text="ANSWER B" />
+                </Pane>
+                <Pane layoutY="26.0" prefHeight="125.0" prefWidth="760.0" style="-fx-background-color: #FAF7E5;">
+                    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="119.0" layoutY="16.0" prefHeight="100.0" prefWidth="256.0" text="Flashcards" underline="true">
+                        <font>
+                            <Font size="48.0" />
+                        </font>
+                    </Label>
+                    <Label fx:id="scoreOfUser" alignment="CENTER" layoutX="586.0" layoutY="66.0" prefHeight="47.0" prefWidth="150.0" style="-fx-background-color: #FAF7E5;" text="0.0">
+                        <font>
+                            <Font size="24.0" />
+                        </font>
+                    </Label>
+                    <Label alignment="CENTER" layoutX="486.0" layoutY="66.0" prefHeight="47.0" prefWidth="94.0" style="-fx-background-color: #FAF7E5; -fx-font-weight: bold;" text="Wynik:">
+                        <font>
+                            <Font size="24.0" />
+                        </font>
+                    </Label>
+                    <Pane layoutX="486.0" layoutY="14.0" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #E5E4E2;">
+                        <Label fx:id="QuestionsCounter" alignment="CENTER" layoutX="7.0" layoutY="8.0" prefHeight="35.0" prefWidth="236.0" style="-fx-background-color: white;" text="Pytanie 0/20">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                    </Pane>
+                </Pane>
+                <Pane layoutY="188.0" prefHeight="125.0" prefWidth="760.0" style="-fx-background-color: #E5E4E2">
+                    <Button layoutX="614.0" layoutY="48.0" mnemonicParsing="false" onAction="#handleButton2Action" prefHeight="30.0" prefWidth="122.0" style=" -fx-font-weight: bold" text="Powrót do menu" />
+                    <Button layoutX="614.0" layoutY="83.0" mnemonicParsing="false" onAction="#handleButton1Action" prefHeight="30.0" prefWidth="122.0" style=" -fx-font-weight: bold" text="Wyjdź z aplikacji" />
+               <Button layoutX="614.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleButton3Action" prefHeight="30.0" prefWidth="122.0" style=" -fx-font-weight: bold" text="Start" />
+               <Pane fx:id="QuestionPane" layoutX="45.0" layoutY="22.0" prefHeight="83.0" prefWidth="530.0">
+                          <Label fx:id="LabelPytanie" alignment="CENTER" layoutX="10.0" layoutY="11.0" prefHeight="61.0" prefWidth="510.0" style="-fx-background-color: white;" text="Pytanie" textAlignment="CENTER">
+                              <font>
+                                  <Font size="24.0" />
+                              </font>
+                          </Label>
+               </Pane>
+                </Pane>
+            </Pane>
+        </AnchorPane>
+    </center>
+</BorderPane>

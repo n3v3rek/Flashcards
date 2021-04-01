@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="gameForOneMultiPane" prefHeight="450.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaFXML.gameForMultiController">
+<center>
+    <AnchorPane prefHeight="650.0" prefWidth="650.0" VBox.vgrow="ALWAYS">
+        <Pane layoutX="-4.0" prefHeight="455.0" prefWidth="646.0" style="-fx-background-color: #C6CECE;">
+            <Pane layoutX="-3.0" layoutY="313.0" prefHeight="155.0" prefWidth="652.0" style="-fx-background-color: #C6CECE;">
+                <Button fx:id="AnswerB" layoutX="25.0" layoutY="75.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" onAction="#handleButton5Action" style="-fx-background-color: white; -fx-font-weight: bold" text="ANSWER C" />
+                <Button fx:id="AnswerA" layoutX="26.0" layoutY="14.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="299.0" onAction="#handleButton4Action" style="-fx-background-color: white; -fx-font-weight: bold" text="ANSWER A" />
+                <Button fx:id="AnswerD" layoutX="339.0" layoutY="75.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="294.0" onAction="#handleButton7Action" style="-fx-background-color: white; -fx-font-weight: bold" text="ANSWER D" />
+                <Button fx:id="AnswerC" layoutX="339.0" layoutY="14.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="294.0" onAction="#handleButton6Action" style="-fx-background-color: white; -fx-font-weight: bold" text="ANSWER B" />
+            </Pane>
+            <Pane layoutX="3.0" layoutY="26.0" prefHeight="125.0" prefWidth="642.0" style="-fx-background-color: #FAF7E5;">
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="55.0" layoutY="16.0" prefHeight="100.0" prefWidth="256.0" text="Flashcards" underline="true">
+                    <font>
+                        <Font size="48.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" layoutX="438.0" layoutY="66.0" prefHeight="47.0" prefWidth="150.0" style="-fx-background-color: #FAF7E5;" text="0.00" fx:id="scoreOfUser">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" layoutX="338.0" layoutY="66.0" prefHeight="47.0" prefWidth="94.0" style="-fx-background-color: #FAF7E5; -fx-font-weight: bold;" text="Wynik:">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <Pane layoutX="338.0" layoutY="13.0" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #E5E4E2;">
+                    <Label alignment="CENTER" layoutX="8.0" layoutY="8.0" prefHeight="35.0" prefWidth="235.0" style="-fx-background-color: white;" text="Pytanie 0/20" fx:id="QuestionsCounter">
+                        <font>
+                            <Font size="24.0" />
+                        </font>w
+                    </Label>
+                </Pane>
+            </Pane>
+            <Pane layoutX="4.0" layoutY="188.0" prefHeight="125.0" prefWidth="642.0" style="-fx-background-color: #E5E4E2">
+                <Button layoutX="507.0" layoutY="48.0" mnemonicParsing="false" onAction="#handleButton2Action" prefHeight="30.0" prefWidth="121.0" style="-fx-font-weight: bold" text="Powrót do menu" />
+                <Button layoutX="506.0" layoutY="83.0" mnemonicParsing="false" onAction="#handleButton1Action" prefHeight="30.0" prefWidth="122.0" style="-fx-font-weight: bold" text="Wyjdź z aplikacji" />
+               <Button layoutX="507.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleButton3Action" prefHeight="30.0" prefWidth="122.0" style="-fx-font-weight: bold" text="Start" fx:id="startButton"/>
+               <Pane layoutX="25.0" layoutY="21.0" prefHeight="87.0" prefWidth="470.0" fx:id="QuestionPane">
+                      <Label fx:id="LabelPytanie" alignment="CENTER" layoutX="13.0" layoutY="13.0" prefHeight="61.0" prefWidth="444.0" style="-fx-background-color: white;" text="Pytanie" textAlignment="CENTER">
+                          <font>
+                              <Font size="24.0" />
+                          </font>
+                      </Label>
+               </Pane>
+            </Pane>
+        </Pane>
+         <Pane layoutX="642.0" prefHeight="464.0" prefWidth="122.0" style="-fx-background-color: #848785;">
+               <Pane layoutX="14.0" layoutY="14.0" prefHeight="90.0" prefWidth="94.0" style="-fx-background-color: white;">
+                     <Label layoutX="7.0" layoutY="6.0" prefHeight="17.0" prefWidth="84.0" style="-fx-font-weight: bold;" text="Nickname: " />
+                     <Label fx:id="Nickname_1" layoutX="9.0" layoutY="23.0" prefHeight="17.0" prefWidth="81.0" />
+                     <Label layoutX="7.0" layoutY="49.0" prefHeight="17.0" prefWidth="65.0" style="-fx-font-weight: bold;" text="Score:" />
+                     <Label fx:id="Score_1" layoutX="9.0" layoutY="68.0" prefHeight="17.0" prefWidth="74.0" />
+               </Pane>
+               <Pane layoutX="14.0" layoutY="131.0" prefHeight="89.0" prefWidth="94.0" style="-fx-background-color: white;">
+                     <Label layoutX="7.0" layoutY="6.0" prefHeight="17.0" prefWidth="84.0" style="-fx-font-weight: bold;" text="Nickname:" />
+                     <Label fx:id="Nickname_2" layoutX="9.0" layoutY="23.0" prefHeight="17.0" prefWidth="81.0" />
+                     <Label layoutX="7.0" layoutY="49.0" prefHeight="17.0" prefWidth="65.0" style="-fx-font-weight: bold;" text="Score:" />
+                     <Label fx:id="Score_2" layoutX="9.0" layoutY="68.0" prefHeight="17.0" prefWidth="74.0" />
+               </Pane>
+            <Pane layoutX="14.0" layoutY="245.0" prefHeight="89.0" prefWidth="94.0" style="-fx-background-color: white;">
+                  <Label layoutX="7.0" layoutY="6.0" prefHeight="17.0" prefWidth="84.0" style="-fx-font-weight: bold;" text="Nickname:" />
+                  <Label fx:id="Nickname_3" layoutX="9.0" layoutY="23.0" prefHeight="17.0" prefWidth="81.0" />
+                  <Label layoutX="7.0" layoutY="49.0" prefHeight="17.0" prefWidth="65.0" style="-fx-font-weight: bold;" text="Score:" />
+                  <Label fx:id="Score_3" layoutX="9.0" layoutY="68.0" prefHeight="17.0" prefWidth="74.0" />
+            </Pane>
+            <Pane layoutX="14.0" layoutY="361.0" prefHeight="89.0" prefWidth="94.0" style="-fx-background-color: white;">
+                  <Label layoutX="7.0" layoutY="6.0" prefHeight="17.0" prefWidth="84.0" style="-fx-font-weight: bold;" text="Nickname:" />
+                  <Label fx:id="Nickname_4" layoutX="9.0" layoutY="23.0" prefHeight="17.0" prefWidth="81.0" />
+                  <Label layoutX="7.0" layoutY="49.0" prefHeight="17.0" prefWidth="65.0" style="-fx-font-weight: bold;" text="Score:" />
+                  <Label fx:id="Score_4" layoutX="9.0" layoutY="68.0" prefHeight="17.0" prefWidth="74.0" />
+            </Pane>
+         </Pane>
+         <Label layoutX="55.0" layoutY="155.0" prefHeight="28.0" prefWidth="90.0" style="-fx-font-weight: bold;" text="Current Player:" />
+         <Label fx:id="Current_playerCon" layoutX="148.0" layoutY="155.0" prefHeight="28.0" prefWidth="131.0" />
+    </AnchorPane>
+</center>
+</BorderPane>
